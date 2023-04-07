@@ -1,4 +1,13 @@
 .hero__bg-img {
-    background-image: ;
-    width: 100vw;
+    background-image: url(../images/tarta4444_LuzDegradado1.webp) ;
+    background-color: $color-bg-black;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
