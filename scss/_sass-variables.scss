@@ -1,0 +1,30 @@
+// Colors
+$color-white: #FFFFFF;
+$color-black: #0F0F0F;
+
+// Color implementation
+$color-bg-white: $color-white;
+$color-bg-black: $color-black;
+
+// Fonts
+$font-primary: "HelveticaNeue-CondensedBold", "Helvetica Neue", Arial, sans-serif;
+
+
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-lowermedium: 37rem; // 592px
+$bp-medium: 48rem; // 768px
+$bp-uppermedium: 60rem; // 960px
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+//Units
+$unit-base: 0.4rem;
+
+//Unit implementation in text
+$font-size-small: calc($unit-base * 4); // 16px
+$font-size-lowermedium: calc($unit-base * 5); // 20px
+$font-size-medium: calc($unit-base * 7); // 28px
+$font-size-uppermedium: calc($unit-base * 9); // 36px
+$font-size-large: calc($unit-base * 11); // 44px
+$font-size-xlarge: calc($unit-base * 13); // 52px
