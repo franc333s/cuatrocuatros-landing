@@ -5,3 +5,84 @@
 .justify-self--end {
     justify-self: end;
 }
+
+
+
+// Js carruser
+.jsCarouselTitle {
+    overflow: hidden;
+    display: flex;
+}
+
+.jsCarouselTitle p {
+    font-size: 6rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin: 12px 0;
+}
+
+
+
+// COSAS A REUBICAR
+.temporal-hovers {
+    padding: 4rem;
+    font-size: 2rem;
+}
+
+.products {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 2rem 0;
+
+    &__img {
+        display: none;
+    }
+
+    &__specs {
+        display: grid;
+        grid-template-columns: 4fr 1fr 1fr;   
+    
+        &__colection,
+        &__year {
+            justify-self: end;
+        }
+    }
+
+    &:hover > .products__img {
+        display: block;
+        position: fixed;
+        inset: 40% 0 0 40%;
+
+    }
+
+}
+
+
+
+
+
+// Accordion
+button {
+    background-color: transparent;
+}
+.accordion {
+    font-family: $font-primary;
+    font-size: 2rem;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: white;
+  }
+  
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }

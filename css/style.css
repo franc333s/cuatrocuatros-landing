@@ -49,6 +49,77 @@ div {
       justify-self: end;
 }
 
+.jsCarouselTitle {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jsCarouselTitle p {
+  font-size: 6rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  margin: 12px 0;
+}
+
+.temporal-hovers {
+  padding: 4rem;
+  font-size: 2rem;
+}
+
+.products {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 2rem 0;
+}
+.products__img {
+  display: none;
+}
+.products__specs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr 1fr;
+  grid-template-columns: 4fr 1fr 1fr;
+}
+.products__specs__colection, .products__specs__year {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+.products:hover > .products__img {
+  display: block;
+  position: fixed;
+  inset: 40% 0 0 40%;
+}
+
+button {
+  background-color: transparent;
+}
+
+.accordion {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Arial, sans-serif;
+  font-size: 2rem;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: white;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
 .hero__bg-img {
   background-image: url(../images/tarta4444_LuzDegradado1.webp);
   background-color: #0F0F0F;
@@ -69,7 +140,7 @@ div {
 }
 
 .hero__text {
-  font-size: 6rem;
+  font-size: 3rem;
   color: #FFFFFF;
   text-transform: uppercase;
 }
