@@ -1,0 +1,95 @@
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
+.product-list {
+    padding: 4.8rem .8rem;
+    font-size: 2rem;
+
+    @include mq($bp-medium) {
+        padding: 4rem 2.8rem;
+        font-size: 2.4rem;
+    }
+
+
+}
+
+.product {
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 1.2rem 0;
+
+    &__img {
+        display: none;
+    }
+
+    &__specs {
+        display: grid;
+        grid-template-columns: 53.26% 46.73%;   
+
+        @include mq($bp-lowermedium) {
+            grid-template-columns: 67.34% 32.66%;
+        }
+    }
+
+   
+    @include mq($bp-medium) {
+        padding: 2rem 0;
+
+        .product__specs__collection-material {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+        }
+        
+        &:hover > .product__img {
+            display: block;
+            position: fixed;
+            inset: 30% 0 0 50%;
+        }
+    }
+
+    &:visited {
+        color: inherit;
+    }
+
+}
+
+
+
+
+
+// Accordion
+button {
+    background-color: transparent;
+}
+.accordion {
+    font-family: $font-primary;
+    font-size: 2rem;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.5s;
+
+    @include mq($bp-medium) {
+        font-size: 2.4rem;
+    }
+
+
+  }
+  
+  .active, .accordion:hover {
+    background-color: white;
+  }
+  
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }

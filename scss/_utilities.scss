@@ -1,3 +1,9 @@
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
 .justify-self--center {
     justify-self: center;
 }
@@ -24,65 +30,13 @@
 
 
 // COSAS A REUBICAR
-.temporal-hovers {
-    padding: 4rem;
-    font-size: 2rem;
-}
 
-.products {
-    border: none;
-    border-bottom: 1px solid black;
-    padding: 2rem 0;
-
-    &__img {
-        display: none;
-    }
-
-    &__specs {
-        display: grid;
-        grid-template-columns: 4fr 1fr 1fr;   
-    
-        &__colection,
-        &__year {
-            justify-self: end;
-        }
-    }
-
-    &:hover > .products__img {
-        display: block;
-        position: fixed;
-        inset: 40% 0 0 40%;
-
-    }
-
-}
-
-
-
-
-
-// Accordion
+a,
 button {
-    background-color: transparent;
+    color: inherit;
+
+    &:visited {
+        color: inherit;
+    }
 }
-.accordion {
-    font-family: $font-primary;
-    font-size: 2rem;
-    padding: 0;
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: white;
-  }
-  
-  .panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
+
