@@ -11,18 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body,
-header,
-ul,
-section,
-div,
-h1,
-h2,
-p {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background-color: #FFFFFF;
 }
@@ -64,6 +52,51 @@ body {
 @media all and (min-width: 48rem) {
   .topbar__item {
     font-size: 3.2rem;
+  }
+}
+
+body,
+header,
+ul,
+section,
+div,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.main--padding {
+  padding: 4.8rem 0.8rem;
+  font-size: 2rem;
+}
+@media all and (min-width: 48rem) {
+  .main--padding {
+    padding: 4rem 2.8rem;
+    font-size: 2.4rem;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 2.4rem;
+}
+@media all and (min-width: 48rem) {
+  h1,
+.h1 {
+    font-size: 3.2rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+}
+@media all and (min-width: 48rem) {
+  h2,
+.h2 {
+    font-size: 2.4rem;
   }
 }
 
@@ -119,20 +152,33 @@ button:visited {
           justify-content: center;
 }
 
+.contact__image {
+  width: 100%;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+}
+@media all and (min-width: 48rem) {
+  .contact__image {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 .hero__text {
   font-size: 3rem;
   color: #FFFFFF;
   text-transform: uppercase;
 }
 
-.product-list {
-  padding: 4.8rem 0.8rem;
-  font-size: 2rem;
+.contact__title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding-bottom: 0.2rem;
+  padding-top: 2.4rem;
 }
 @media all and (min-width: 48rem) {
-  .product-list {
-    padding: 4rem 2.8rem;
-    font-size: 2.4rem;
+  .contact__title {
+    font-size: 2rem;
   }
 }
 
@@ -209,4 +255,32 @@ button {
   overflow: hidden;
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
+}
+
+.contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 5.6rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+@media all and (min-width: 48rem) {
+  .contact {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 4rem 1fr 4rem 2fr;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 4rem;
+  }
+}
+.contact__awards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }

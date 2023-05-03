@@ -1,0 +1,33 @@
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
+
+.contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding-top: 5.6rem;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    color: white;
+
+    @include mq($bp-medium) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 4rem;
+    }
+
+    &__awards {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-end;
+
+    }
+}
+

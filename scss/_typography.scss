@@ -6,3 +6,14 @@
 
 
 
+.contact__title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding-bottom: .2rem;
+    padding-top: 2.4rem;
+
+    @include mq($bp-medium) {
+        font-size: 2rem;
+    }
+
+}

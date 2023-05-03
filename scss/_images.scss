@@ -9,6 +9,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
+
+
+.contact__image {
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+
+    @include mq($bp-medium) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+}

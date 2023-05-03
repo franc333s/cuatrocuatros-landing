@@ -1,0 +1,23 @@
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
+h1,
+.h1 {
+    font-size: 2.4rem;
+
+    @include mq($bp-medium) {
+        font-size: 3.2rem;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 2rem;
+
+    @include mq($bp-medium) {
+        font-size: 2.4rem;
+    }
+}
