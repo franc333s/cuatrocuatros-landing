@@ -13,6 +13,10 @@
 }
 
 
+.bg-color--black {
+    background-color: black;
+}
+
 
 // Js carruser
 .jsCarouselTitle {
@@ -28,17 +32,8 @@
 }
 
 
-
-// Reset elements
-
-a,
-button {
-    color: inherit;
-
-    &:visited {
-        color: inherit;
-    }
+.jsHide {
+    display: none;
 }
-
 
 

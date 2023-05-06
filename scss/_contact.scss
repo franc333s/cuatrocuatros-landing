@@ -6,28 +6,35 @@
 
 
 .contact {
+    font-size: 2rem;
+    color: white;
+
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
 
     padding-top: 5.6rem;
-    background-color: rgba(0, 0, 0, 0.6);
-
-    color: white;
-
+  
     @include mq($bp-medium) {
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr;
-        gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 8rem;
+    }
+
+    @include mq($bp-large) {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 2fr;
     }
 
     &__awards {
         display: flex;
-        gap: 2rem;
         align-items: flex-end;
+        gap: 2rem;
 
+        &:first-of-type {
+            padding-top: .8rem;
+        }
     }
 }
 

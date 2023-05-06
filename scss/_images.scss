@@ -1,3 +1,9 @@
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
 .hero__bg-img {
     background-image: url(../images/tarta4444_LuzDegradado1.webp) ;
     background-color: $color-bg-black;
@@ -13,13 +19,62 @@
 
 
 
+.product {
+
+    &__hover-img {
+        display: none;
+    }
+
+//hovered image
+    &:hover > .product__hover-img {
+
+        @include mq($bp-medium) {
+            display: block;
+            position: fixed;
+            inset: 30% 0 0 40%;
+        }
+    }
+
+    &__hover-img {
+
+        &__image {
+            width: 50vw;
+            height: auto;
+        }
+    }
+
+//inside images
+    &__info__images {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+
+        @include mq($bp-uppermedium) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        }
+
+        &__item {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+}
+
+
+
 .contact__image {
     width: 100%;
+    height: auto;
+
+    object-fit: cover;
     padding-top: 6rem;
     padding-bottom: 2rem;
 
     @include mq($bp-medium) {
-        padding-top: 0;
+        padding-top: 2.4rem;
         padding-bottom: 0;
     }
 

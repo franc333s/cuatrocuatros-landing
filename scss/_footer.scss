@@ -1,0 +1,57 @@
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+
+    @include mq($bp-medium) {
+        grid-template-columns: 43% 24.34% 32.66%;
+        gap: 0;
+    }
+
+    @include mq($bp-lowerlarge) {
+        grid-template-columns: 32.34% 36% 32.66%;
+        gap: 0;
+    }
+
+    @include mq($bp-large) {
+        grid-template-columns: 25.34% 42% 32.66%;
+        gap: 0;
+    }
+
+    &__element {
+        text-transform: uppercase;
+        list-style: none;
+    }
+
+    &__2columns {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    &__hide-first {
+
+        @include mq(47.94rem, max-width) {
+            display: none;
+        }
+
+        @include mq($bp-lowerlarge) {
+            display: none;
+        }
+    }
+
+    &__hide-last {
+
+        @include mq($bp-large) {
+            display: none;
+        }
+    }
+}
+
+
+

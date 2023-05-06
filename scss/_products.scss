@@ -16,27 +16,11 @@
         color: inherit;
     }
 
-    &:hover > .product__img {
-
-        @include mq($bp-medium) {
-            display: block;
-            position: fixed;
-            inset: 30% 0 0 50%;
-        }
-    }
-
     @include mq($bp-medium) {
         padding: 2rem 0;
-
-        .product__specs__collection-material {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-        }
     }
 
-    &__img {
-        display: none;
-    }
+
 
     &__specs {
         display: grid;
@@ -44,6 +28,37 @@
 
         @include mq($bp-lowermedium) {
             grid-template-columns: 67.34% 32.66%;
+        }
+
+        &__collection-material {
+
+            @include mq($bp-medium) {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+    }
+
+    &__info {
+
+        &__desc {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            @include mq($bp-medium) {
+                grid-template-columns: 67.34% 32.66%;
+
+            }
+
+            &__text {
+                padding-bottom: 2rem;
+
+                @include mq($bp-medium) {
+                    width: 80%;
+
+                }
+            }
+
         }
     }
 }
