@@ -20,8 +20,6 @@
         padding: 2rem 0;
     }
 
-
-
     &__specs {
         display: grid;
         grid-template-columns: 53.26% 46.73%;   
@@ -47,7 +45,6 @@
 
             @include mq($bp-medium) {
                 grid-template-columns: 67.34% 32.66%;
-
             }
 
             &__text {
@@ -55,10 +52,8 @@
 
                 @include mq($bp-medium) {
                     width: 80%;
-
                 }
             }
-
         }
     }
 }
@@ -67,11 +62,9 @@
 
 
 
-// Accordion
-button {
-    background-color: transparent;
-}
-.accordion {
+// Drop-down content
+.accordion,
+.jsAccordion {
     font-family: $font-primary;
     font-size: 2rem;
     padding: 0;
@@ -89,11 +82,11 @@ button {
 
   }
   
-  .active, .accordion:hover {
+  .jsActive, .jsAccordion:hover {
     background-color: white;
   }
   
-  .panel {
+  .jsAccordContent {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;

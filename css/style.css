@@ -142,6 +142,7 @@ a:visited {
 
 button {
   color: inherit;
+  background-color: transparent;
 }
 button:visited {
   color: inherit;
@@ -282,11 +283,8 @@ button:visited {
   }
 }
 
-button {
-  background-color: transparent;
-}
-
-.accordion {
+.accordion,
+.jsAccordion {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Arial, sans-serif;
   font-size: 2rem;
   padding: 0;
@@ -299,16 +297,17 @@ button {
   transition: 0.5s;
 }
 @media all and (min-width: 48rem) {
-  .accordion {
+  .accordion,
+.jsAccordion {
     font-size: 2.4rem;
   }
 }
 
-.active, .accordion:hover {
+.jsActive, .jsAccordion:hover {
   background-color: white;
 }
 
-.panel {
+.jsAccordContent {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.5s ease-out;

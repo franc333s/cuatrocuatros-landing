@@ -21,13 +21,13 @@ window.addEventListener('load', carouselTitle('.jsCarouselTitle', .4))
   
 
 
-// accordion
-let acc = document.getElementsByClassName("accordion");
+// Drop-down content
+let acc = document.getElementsByClassName("jsAccordion");
 let i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
+    this.classList.toggle("jsActive");
     let panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
@@ -37,7 +37,8 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// hide hover image
+
+// hide hover image - needs fixing
 const jsBtn = document.querySelector('.jsBtn');
 jsBtn.addEventListener('click', toggleMenu);
 
